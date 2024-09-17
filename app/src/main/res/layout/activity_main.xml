@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="MainViewModel"
+            type="com.example.bt3.viewmodel.MainViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/menu_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/xanh"
+            android:layout_alignParentBottom="true"
+            app:select_item="@{viewpager2}"
+            app:menu="@menu/menu_nav"/>
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/menu_nav"/>
+
+
+    </RelativeLayout>
+</layout>
